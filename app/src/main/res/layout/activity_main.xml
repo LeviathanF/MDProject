@@ -2,17 +2,19 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    tools:context=".activity.MainActivity">
+    <Button
+        style="@style/ListButtonStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/btn1"
+        android:text="列表转场" />
+    <Button
+        style="@style/ListButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:id="@+id/btn2"
+        android:text="渐变动画"
+        />
 </android.support.constraint.ConstraintLayout>
