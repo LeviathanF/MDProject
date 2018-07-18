@@ -18,10 +18,17 @@ class PictureDetailActivity:AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picture_detail)
+        initView()
+        init()
     }
 
     private fun initView(){
         ivContent = findViewById(R.id.iv_content)
         tvContent = findViewById(R.id.tv_content)
+    }
+
+    private fun init(){
+        title = "列表展示"
+        ivContent.setImageResource(R.mipmap.ic_launcher_round)
     }
 }

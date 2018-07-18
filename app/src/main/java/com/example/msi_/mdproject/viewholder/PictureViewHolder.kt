@@ -18,7 +18,7 @@ class PictureViewHolder(root:ViewGroup): BaseViewHolder<Item>(root.context,root,
     private lateinit var tvTitle:TextView
 
     companion object {
-        var HOLDER_CREATOR =
+        val HOLDER_CREATOR =
                 BaseViewHolder.ViewHolderCreator<PictureViewHolder>{group, type -> PictureViewHolder(group)}
     }
     override fun initView() {

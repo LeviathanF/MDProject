@@ -1,6 +1,7 @@
 package com.example.msi_.mdproject.activity
 
 import android.animation.TimeInterpolator
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
@@ -35,6 +36,7 @@ class AnimationActivity:AppCompatActivity(){
     private fun init(){
         title = "渐变动画"
         iv1.setOnClickListener {
+            iv1.setBackgroundColor(Color.GRAY)
             val animation = ViewAnimationUtils.createCircularReveal(iv1,
                     iv1.width/2,iv1.height/2
             ,0f, Math.max(iv1.width,iv1.height).toFloat()

@@ -1,11 +1,15 @@
 package com.example.msi_.mdproject.viewholder;
 
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.msi_.mdproject.bean.Item;
 import com.example.msi_.mdproject.R;
+import com.example.msi_.mdproject.event.VhClickEvent;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * @Author：ZC
@@ -39,5 +43,11 @@ public class TestViewHolder extends BaseViewHolder<Item> {
         }else{
             ivContent.setImageResource(bean.getIcoId());
         }
+        ivContent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EventBus.getDefault().post(new VhClickEvent<>(ivContent));
+            }
+        });
     }
 }
