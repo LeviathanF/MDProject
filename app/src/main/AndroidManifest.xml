@@ -19,6 +19,7 @@
         <activity android:name=".activity.ListMDshow" />
         <activity android:name=".activity.PictureDetailActivity" />
         <activity android:name=".activity.AnimationActivity" />
+        <activity android:name=".activity.ShowActivity" />
     </application>
 
 </manifest>

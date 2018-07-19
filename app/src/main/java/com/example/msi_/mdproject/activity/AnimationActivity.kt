@@ -1,6 +1,7 @@
 package com.example.msi_.mdproject.activity
 
 import android.animation.TimeInterpolator
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -33,18 +34,29 @@ class AnimationActivity:AppCompatActivity(){
         iv2 = findViewById(R.id.iv2)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun init(){
         title = "渐变动画"
-        iv1.setOnClickListener {
-            iv1.setBackgroundColor(Color.GRAY)
+        iv1.setOnTouchListener { view, motionEvent ->
             val animation = ViewAnimationUtils.createCircularReveal(iv1,
-                    iv1.width/2,iv1.height/2
-            ,0f, Math.max(iv1.width,iv1.height).toFloat()
+                    motionEvent.x.toInt(),motionEvent.y.toInt()
+                    ,0f, Math.max(iv1.width,iv1.height)*1.2.toFloat()
             )
-            animation.setDuration(2000)
+            animation.setDuration(1000)
             animation.interpolator = AccelerateDecelerateInterpolator()
             animation.start()
+            true
         }
+//        iv1.setOnClickListener {
+//            iv1.setBackgroundColor(Color.GRAY)
+//            val animation = ViewAnimationUtils.createCircularReveal(iv1,
+//                    iv1.width/2,iv1.height/2
+//            ,0f, Math.max(iv1.width,iv1.height).toFloat()
+//            )
+//            animation.setDuration(2000)
+//            animation.interpolator = AccelerateDecelerateInterpolator()
+//            animation.start()
+//        }
         iv2.setOnClickListener {
             val animation = ViewAnimationUtils.createCircularReveal(iv2,
                     0,0,0f, max(iv2.width,iv2.height)*1.5.toFloat())

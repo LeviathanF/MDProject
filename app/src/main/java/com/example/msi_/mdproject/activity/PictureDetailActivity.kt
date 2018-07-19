@@ -9,7 +9,7 @@ import com.example.msi_.mdproject.R
 /**
  *@Author：ZC
  *@Time： 2018/7/17 15:58
- *@Description：
+ *@Description：图片详细信息展示页面
  **/
 class PictureDetailActivity:AppCompatActivity(){
     private lateinit var ivContent:ImageView
@@ -30,5 +30,8 @@ class PictureDetailActivity:AppCompatActivity(){
     private fun init(){
         title = "列表展示"
         ivContent.setImageResource(R.mipmap.ic_launcher_round)
+        ivContent.setOnClickListener{
+            onBackPressed()
+        }
     }
 }

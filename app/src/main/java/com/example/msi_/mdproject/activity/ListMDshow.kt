@@ -7,6 +7,8 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.transition.Explode
+import android.transition.Fade
 import android.view.View
 import android.widget.ImageView
 import com.example.msi_.mdproject.R
@@ -22,7 +24,7 @@ import org.greenrobot.eventbus.ThreadMode
 /**
  *@Author：ZC
  *@Time： 2018/7/13 14:56
- *@Description：
+ *@Description：RecyclerView展示页面
  **/
 class ListMDshow: AppCompatActivity() {
     private lateinit var rvContent:RecyclerView
@@ -32,6 +34,7 @@ class ListMDshow: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listmdshow)
         initView()
+        init()
         initToolsbar()
         initRv()
     }
@@ -50,6 +53,14 @@ class ListMDshow: AppCompatActivity() {
         rvContent = findViewById(R.id.rv_content)
     }
 
+    private fun init(){
+//        val fade = Fade()
+//        fade.duration = 200
+//        val explode = Explode()
+//        explode.duration = 500
+//        window.exitTransition = fade
+    }
+
     private fun initRv(){
         adapter = OnlyOneTypeAdapter(TestViewHolder::class.java)
         var list = ArrayList<Item>()
@@ -64,15 +75,10 @@ class ListMDshow: AppCompatActivity() {
 
     private fun initToolsbar(){
         title = "列表"
-//        if (supportActionBar!=null) {
-//            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-//            supportActionBar!!.setHomeButtonEnabled(true)
-//        }
-    }
-
-    private fun lauch(view:View){
-        val compat:ActivityOptionsCompat = ActivityOptionsCompat.makeScaleUpAnimation(view,
-                view.width/2,view.height/2,0,0)
+        if (supportActionBar!=null) {
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            supportActionBar!!.setHomeButtonEnabled(true)
+        }
     }
 
     @SuppressWarnings("unused")
@@ -85,4 +91,5 @@ class ListMDshow: AppCompatActivity() {
             startActivity(intent,transitionActivityOptions.toBundle())
         }
     }
+    
 }

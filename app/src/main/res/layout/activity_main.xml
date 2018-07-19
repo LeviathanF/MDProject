@@ -17,4 +17,10 @@
         android:id="@+id/btn2"
         android:text="渐变动画"
         />
+    <Button
+        style="@style/ListButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
+        android:id="@+id/btn3"
+        android:text="Activity展现"
+        />
 </android.support.constraint.ConstraintLayout>
