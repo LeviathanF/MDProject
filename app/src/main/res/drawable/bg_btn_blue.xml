@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorWhite">
+    <item>
+        <shape>
+            <!--未点击时展示的颜色-->
+            <solid android:color="@color/colorPrimary"/>
+        </shape>
+    </item>
+</ripple>

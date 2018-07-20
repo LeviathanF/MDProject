@@ -20,6 +20,8 @@
         <activity android:name=".activity.PictureDetailActivity" />
         <activity android:name=".activity.AnimationActivity" />
         <activity android:name=".activity.ShowActivity" />
+        <activity android:name=".activity.VerticalListActivity" />
+        <activity android:name=".activity.WaterFallActivity" />
     </application>
 
 </manifest>

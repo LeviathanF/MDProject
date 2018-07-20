@@ -19,16 +19,17 @@ import org.greenrobot.eventbus.EventBus;
 public class TestViewHolder extends BaseViewHolder<Item> {
     private ImageView ivContent;
     private TextView tvTitle;
-    public static BaseViewHolder.ViewHolderCreator HOLDER_CREATOR = new ViewHolderCreator() {
+    public static BaseViewHolder.ViewHolderCreator HOLDER_CREATOR = new ViewHolderCreator(){
         @Override
-        public BaseViewHolder createByViewGroupAndType(ViewGroup group, int type) {
+        public TestViewHolder createByViewGroupAndType(ViewGroup group, int type) {
             return new TestViewHolder(group);
         }
     };
 
-    public TestViewHolder(ViewGroup root) {
+    private TestViewHolder(ViewGroup root) {
         super(root.getContext(), root, R.layout.vh_rp);
     }
+
     @Override
     protected void initView() {
         ivContent = itemView.findViewById(R.id.iv_content);

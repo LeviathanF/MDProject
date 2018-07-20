@@ -2,20 +2,15 @@ package com.example.msi_.mdproject.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.transition.Explode
-import android.transition.Fade
-import android.view.View
 import android.widget.ImageView
 import com.example.msi_.mdproject.R
 import com.example.msi_.mdproject.adapter.OnlyOneTypeAdapter
 import com.example.msi_.mdproject.bean.Item
 import com.example.msi_.mdproject.event.VhClickEvent
-import com.example.msi_.mdproject.viewholder.PictureViewHolder
 import com.example.msi_.mdproject.viewholder.TestViewHolder
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -24,7 +19,7 @@ import org.greenrobot.eventbus.ThreadMode
 /**
  *@Author：ZC
  *@Time： 2018/7/13 14:56
- *@Description：RecyclerView展示页面
+ *@Description：RecyclerView 点击项目跳转动画展示页面
  **/
 class ListMDshow: AppCompatActivity() {
     private lateinit var rvContent:RecyclerView
@@ -32,7 +27,7 @@ class ListMDshow: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listmdshow)
+        setContentView(R.layout.activity_only_recyclerview)
         initView()
         init()
         initToolsbar()
