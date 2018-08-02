@@ -33,5 +33,20 @@
         app:layout_constraintTop_toBottomOf="@id/btn4"
         android:id="@+id/btn5"
         android:text="瀑布流展示" />
+    <Button
+        style="@style/ListButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/btn5"
+        android:id="@+id/btn6"
+        android:text="RecyclerView删除Item" />
+    <Button
+        style="@style/ListButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/btn6"
+        android:id="@+id/btn7"
+        android:text="RecyclerView动画" />
+ <Button
+        style="@style/ListButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
+        android:id="@+id/btn8"
+        android:text="pdf展示" />
 
 </android.support.constraint.ConstraintLayout>

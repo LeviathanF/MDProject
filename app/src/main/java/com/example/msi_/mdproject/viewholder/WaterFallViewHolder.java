@@ -17,6 +17,7 @@ public class WaterFallViewHolder extends BaseViewHolder<String> {
     private int[] colors = {Color.BLUE,Color.RED,Color.GREEN,Color.MAGENTA};
     private LinearLayout llContent;
 
+    @SuppressWarnings("unused")
     public static BaseViewHolder.ViewHolderCreator HOLDER_CREATOR = new ViewHolderCreator() {
         @Override
         public WaterFallViewHolder createByViewGroupAndType(ViewGroup group, int type) {

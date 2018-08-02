@@ -22,6 +22,9 @@
         <activity android:name=".activity.ShowActivity" />
         <activity android:name=".activity.VerticalListActivity" />
         <activity android:name=".activity.WaterFallActivity" />
+        <activity android:name=".activity.RecyclerViewShowActivity" />
+        <activity android:name=".activity.RVAnimationActivity" />
+        <activity android:name=".activity.PdfActivity" />
     </application>
 
 </manifest>

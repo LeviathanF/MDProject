@@ -17,15 +17,16 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
         initView();
     }
 
+    @SuppressWarnings("unused")
     public Context getContext(){
-        if (itemView!=null&&itemView.getContext()!=null){
+        if (itemView.getContext()!=null){
             return itemView.getContext();
         }
         return null;
     }
 
     protected abstract void initView();
-    public void bindActivityListener(View.OnClickListener listener){};
+    public void bindActivityListener(View.OnClickListener listener){}
 
     /**
      * 用给定的 data 对 holder 的 view 进行赋值
@@ -35,9 +36,9 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
     /**
      * 判断是否被选中
      */
-    public void setSelected(boolean flag){};
+    public void setSelected(boolean flag){}
 
     public interface ViewHolderCreator<VH extends BaseViewHolder>{
-        public VH createByViewGroupAndType(ViewGroup group,int type);
+        VH createByViewGroupAndType(ViewGroup group,int type);
     }
 }

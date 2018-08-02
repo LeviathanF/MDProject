@@ -19,6 +19,8 @@ import org.greenrobot.eventbus.EventBus;
 public class TestViewHolder extends BaseViewHolder<Item> {
     private ImageView ivContent;
     private TextView tvTitle;
+
+    @SuppressWarnings("unused")
     public static BaseViewHolder.ViewHolderCreator HOLDER_CREATOR = new ViewHolderCreator(){
         @Override
         public TestViewHolder createByViewGroupAndType(ViewGroup group, int type) {

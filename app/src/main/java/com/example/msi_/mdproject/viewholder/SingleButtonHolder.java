@@ -17,6 +17,8 @@ import org.greenrobot.eventbus.EventBus;
 public class SingleButtonHolder extends BaseViewHolder<String> {
 
     private TextView tvContent;
+
+    @SuppressWarnings("unused")
     public static BaseViewHolder.ViewHolderCreator HOLDER_CREATOR = new ViewHolderCreator(){
         @Override
         public SingleButtonHolder createByViewGroupAndType(ViewGroup group, int type) {

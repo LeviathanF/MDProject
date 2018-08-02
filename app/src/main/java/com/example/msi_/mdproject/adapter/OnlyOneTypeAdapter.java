@@ -112,6 +112,33 @@ public class OnlyOneTypeAdapter<D> extends RecyclerView.Adapter<BaseViewHolder> 
         }
     }
 
+    /**
+     * 移除指定的项目
+     */
+    public void removeItem(int position){
+        if (position>list.size()){
+            return;
+        }
+        list.remove(position);
+        notifyItemRemoved(position);
+        if (position != list.size()){
+            notifyItemRangeChanged(position,list.size()-position);
+        }
+    }
+
+    /**
+     * 添加指定项目
+     * @param position 添加位置
+     * @param content 添加内容
+     */
+    public void addItem(int position,D content){
+        list.add(position,content);
+        notifyItemInserted(position);
+        if (position != list.size()){
+            notifyItemRangeChanged(position,list.size()-position);
+        }
+    }
+
     public int getSelectedPosition() {
         return selectedPosition;
     }

@@ -25,6 +25,12 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var btn4:Button
 //    RecyclerView瀑布流展示页面
     private lateinit var btn5:Button
+//    RecyclerView删除Item展示页面
+    private lateinit var btn6:Button
+//    RecyclerView动画展示页面
+    private lateinit var btn7:Button
+ //    pdf展示页面
+    private lateinit var btn8:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,6 +44,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         btn3 = findViewById(R.id.btn3)
         btn4 = findViewById(R.id.btn4)
         btn5 = findViewById(R.id.btn5)
+        btn6 = findViewById(R.id.btn6)
+        btn7 = findViewById(R.id.btn7)
+        btn8 = findViewById(R.id.btn8)
     }
 
     private fun init(){
@@ -46,6 +55,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         btn3.setOnClickListener(this)
         btn4.setOnClickListener(this)
         btn5.setOnClickListener(this)
+        btn6.setOnClickListener(this)
+        btn7.setOnClickListener(this)
+        btn8.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -61,6 +73,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.btn4 -> { intent = Intent(this,VerticalListActivity::class.java) }
             R.id.btn5 -> { intent = Intent(this,WaterFallActivity::class.java) }
+            R.id.btn6 -> { intent = Intent(this,RecyclerViewShowActivity::class.java) }
+            R.id.btn7 -> { intent = Intent(this,RVAnimationActivity::class.java) }
+            R.id.btn8 -> { intent = Intent(this,PdfActivity::class.java) }
             else -> {}
         }
         if (intent != null){
