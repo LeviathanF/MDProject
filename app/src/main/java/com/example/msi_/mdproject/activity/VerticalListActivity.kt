@@ -62,14 +62,18 @@ class  VerticalListActivity:AppCompatActivity(){
         adapter.notifyDataSetChanged()
     }
 
+    /**
+     * RecyclerView项目点击事件
+     * event中存储的view被指定activity跳转动画的动画view
+     */
     @SuppressWarnings("unused")
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onItemClike(event: VhClickEvent<TextView>){
         if (event.t is TextView){
             val view = event.t
-            if (view !=null) {
+            view?.let{
                 val intent = Intent(this, PictureDetailActivity::class.java)
-                startActivity(intent, ActivityOptionsCompat.makeClipRevealAnimation(view, 0, 0, view.width, view.height).toBundle())
+                startActivity(intent, ActivityOptionsCompat.makeClipRevealAnimation(it, 0, 0, it.width, it.height).toBundle())
             }
         }
     }

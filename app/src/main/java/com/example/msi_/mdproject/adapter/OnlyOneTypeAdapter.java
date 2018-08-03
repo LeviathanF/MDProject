@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import com.example.msi_.mdproject.viewholder.BaseViewHolder;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 /**
  * @Author：ZC
  * @Time： 2018/7/17 11:22
- * @Description：
+ * @Description：填装只有一种viewHolder的adapter
  **/
 public class OnlyOneTypeAdapter<D> extends RecyclerView.Adapter<BaseViewHolder> {
     private List<D> list = new ArrayList<>();
@@ -27,7 +29,7 @@ public class OnlyOneTypeAdapter<D> extends RecyclerView.Adapter<BaseViewHolder> 
         this.vhClass = vhClass;
     }
 
-    public void setList(List<D> list) {
+    public void setList(@NotNull List<D> list) {
         try {
             this.list.clear();
             this.list.addAll(list);
@@ -93,12 +95,7 @@ public class OnlyOneTypeAdapter<D> extends RecyclerView.Adapter<BaseViewHolder> 
 
     @Override
     public int getItemCount() {
-        try {
-            return list.size();
-        } catch (Exception e) {
-            Log.e("initContent", "initContent: " + e.getMessage());
-        }
-        return 0;
+        return list.size();
     }
 
     /**

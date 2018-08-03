@@ -3,9 +3,11 @@ package com.example.msi_.mdproject.activity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import android.widget.LinearLayout
 import com.example.msi_.mdproject.BaseActivity.BaseActivity
 import com.example.msi_.mdproject.R
+import com.example.msi_.mdproject.adapter.HeadViewAdapter
 import com.example.msi_.mdproject.adapter.OnlyOneTypeAdapter
 import com.example.msi_.mdproject.viewholder.SingleButtonHolder
 
@@ -16,7 +18,7 @@ import com.example.msi_.mdproject.viewholder.SingleButtonHolder
  **/
 class RVAnimationActivity:BaseActivity(){
     private lateinit var rvContent:RecyclerView
-    private lateinit var adapter: OnlyOneTypeAdapter<String>
+    private lateinit var adapter: HeadViewAdapter<String>
 
     override fun getLayoutId(): Int = R.layout.activity_only_recyclerview
 
@@ -32,10 +34,11 @@ class RVAnimationActivity:BaseActivity(){
         for (i in 1..100){
             list.add(i.toString())
         }
-        adapter = OnlyOneTypeAdapter(SingleButtonHolder::class.java)
-        adapter.setList(list)
+        adapter = HeadViewAdapter(arrayListOf(View(this)),arrayListOf(View(this))
+                ,list)
         rvContent.adapter = adapter
         rvContent.layoutManager = LinearLayoutManager(this)
+//        为RecyclerView添加分割线并设置分割线样式
         val decoration = DividerItemDecoration(this,LinearLayout.VERTICAL)
         decoration.setDrawable(getDrawable(R.drawable.rv_line))
         rvContent.addItemDecoration(decoration)

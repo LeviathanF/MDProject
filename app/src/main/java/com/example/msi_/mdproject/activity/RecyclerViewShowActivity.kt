@@ -63,6 +63,9 @@ class RecyclerViewShowActivity:BaseActivity(){
         rvContent.layoutManager = LinearLayoutManager(this)
     }
 
+    /**
+     * RecyclerView项目点击事件
+     */
     @Subscribe(threadMode = ThreadMode.MAIN)
     @SuppressWarnings("unused")
     fun onRVItemClick(event: VhClickEvent<Int>){
