@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var btn7:Button
  //    pdf展示页面
     private lateinit var btn8:Button
+    //    viewPager展示页面
+    private lateinit var btn9:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,6 +49,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         btn6 = findViewById(R.id.btn6)
         btn7 = findViewById(R.id.btn7)
         btn8 = findViewById(R.id.btn8)
+        btn9 = findViewById(R.id.btn9)
     }
 
     private fun init(){
@@ -58,6 +61,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         btn6.setOnClickListener(this)
         btn7.setOnClickListener(this)
         btn8.setOnClickListener(this)
+        btn9.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
