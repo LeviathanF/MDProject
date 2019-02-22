@@ -34,7 +34,9 @@ public class WaterFallViewHolder extends BaseViewHolder<String> {
         llContent = itemView.findViewById(R.id.ll_content);
         ViewGroup.LayoutParams params = llContent.getLayoutParams();
 //        随机分配组件高度
-        params.height = (int)(Math.random()*200+200);
+//        params.height = (int)(Math.random()*200+200);
+        params.height = 200;
+        params.width = (int)(Math.random()*200+200);
         llContent.setLayoutParams(params);
     }
 

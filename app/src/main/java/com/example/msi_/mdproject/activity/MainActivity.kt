@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var btn7:Button
  //    pdf展示页面
     private lateinit var btn8:Button
-    //    viewPager展示页面
+//    RecyclerView展示动画
     private lateinit var btn9:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn6 -> { intent = Intent(this,RecyclerViewShowActivity::class.java) }
             R.id.btn7 -> { intent = Intent(this,RVAnimationActivity::class.java) }
             R.id.btn8 -> { intent = Intent(this,PdfActivity::class.java) }
+            R.id.btn9 -> { intent = Intent(this,RecyclerViewEntryActivity::class.java) }
             else -> {}
         }
         if (intent != null){

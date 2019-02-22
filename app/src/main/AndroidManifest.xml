@@ -25,6 +25,7 @@
         <activity android:name=".activity.RecyclerViewShowActivity" />
         <activity android:name=".activity.RVAnimationActivity" />
         <activity android:name=".activity.PdfActivity" />
+        <activity android:name=".activity.RecyclerViewEntryActivity" />
     </application>
 
 </manifest>

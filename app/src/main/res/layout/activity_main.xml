@@ -1,66 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.MainActivity">
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/btn1"
-        android:text="列表转场" />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn1"
-        android:id="@+id/btn2"
-        android:text="渐变动画"
-        />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn2"
-        android:id="@+id/btn3"
-        android:text="Activity展现"
-        />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn3"
-        android:id="@+id/btn4"
-        android:text="列表转场2" />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn4"
-        android:id="@+id/btn5"
-        android:text="瀑布流展示" />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn5"
-        android:id="@+id/btn6"
-        android:text="RecyclerView删除Item" />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn6"
-        android:id="@+id/btn7"
-        android:text="RecyclerView动画" />
- <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn7"
-        android:id="@+id/btn8"
-        android:text="pdf展示" />
-    <Button
-        style="@style/ListButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/btn8"
-        android:id="@+id/btn9"
-        android:text="ViewPager展示" />
 
-</android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
+    <Button
+        android:id="@+id/btn1"
+        style="@style/ListButtonStyle"
+        android:text="列表转场"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/ListButtonStyle"
+        android:text="渐变动画"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/ListButtonStyle"
+        android:text="Activity展现"
+        app:layout_constraintTop_toBottomOf="@id/btn2" />
+
+    <Button
+        android:id="@+id/btn4"
+        style="@style/ListButtonStyle"
+        android:text="列表转场2"
+        app:layout_constraintTop_toBottomOf="@id/btn3" />
+
+    <Button
+        android:id="@+id/btn5"
+        style="@style/ListButtonStyle"
+        android:text="瀑布流展示"
+        app:layout_constraintTop_toBottomOf="@id/btn4" />
+
+    <Button
+        android:id="@+id/btn6"
+        style="@style/ListButtonStyle"
+        android:text="RecyclerView删除Item"
+        app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+    <Button
+        android:id="@+id/btn7"
+        style="@style/ListButtonStyle"
+        android:text="RecyclerView动画"
+        app:layout_constraintTop_toBottomOf="@id/btn6" />
+
+    <Button
+        android:id="@+id/btn8"
+        style="@style/ListButtonStyle"
+        android:text="pdf展示"
+        app:layout_constraintTop_toBottomOf="@id/btn7" />
+
+    <Button
+        android:id="@+id/btn9"
+        style="@style/ListButtonStyle"
+        android:text="RecyclerView展示动画"
+        app:layout_constraintTop_toBottomOf="@id/btn7" />
+
+</LinearLayout>

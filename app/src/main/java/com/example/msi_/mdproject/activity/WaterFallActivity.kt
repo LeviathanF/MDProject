@@ -37,7 +37,7 @@ class WaterFallActivity:BaseActivity(){
         }
         adapter = OnlyOneTypeAdapter(WaterFallViewHolder::class.java)
         adapter.setList(list)
-        rvContent.layoutManager = StaggeredGridLayoutManager(3,LinearLayout.VERTICAL)
+        rvContent.layoutManager = StaggeredGridLayoutManager(3,LinearLayout.HORIZONTAL)
         rvContent.adapter = adapter
     }
 

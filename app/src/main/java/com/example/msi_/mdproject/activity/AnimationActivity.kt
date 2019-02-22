@@ -43,7 +43,7 @@ class AnimationActivity:AppCompatActivity(){
                     ,0f, Math.max(iv1.width,iv1.height)*1.2.toFloat()
             )
             animation.setDuration(1000)
-            animation.interpolator = AccelerateDecelerateInterpolator()
+            animation.interpolator = AccelerateDecelerateInterpolator() as TimeInterpolator?
             animation.start()
             true
         }
